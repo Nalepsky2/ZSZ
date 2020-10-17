@@ -5,6 +5,7 @@ import com.zsz.raiting.Sorter;
 import com.zsz.raiting.SortingParameters;
 import com.zsz.raiting.SystemRanker;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -17,7 +18,7 @@ public class TopSystemsRanker extends SystemRanker<TopERPSystem> implements Sort
     public void sortSystems() {
         systems.forEach(system -> system.setTotalScore(calculateTotalScore(system)));
 
-        systems = systems.stream().sorted().collect(Collectors.toList());
+        systems = systems.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
     }
 
     private Double calculateTotalScore(TopERPSystem system){
