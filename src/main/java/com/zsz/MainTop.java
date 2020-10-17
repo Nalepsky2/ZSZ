@@ -14,7 +14,7 @@ public class MainTop {
             final TopSystemsRanker ranker = new TopSystemsRanker(ExcelReader.ReedTop());
 
             ranker.sortSystems();
-            ranker.printResults(15);
+            ranker.printResults();
         } catch (InvalidParametersException e) {
             System.out.println(e.getMessage());
         }

@@ -17,4 +17,10 @@ public abstract class SystemRanker <T extends ERPSystem>{
             System.out.println(counter++ + ": " + sys.toString());
         }
     }
+    public void printResults(){
+        int counter = 1;
+        for(ERPSystem sys : systems) {
+            System.out.println(counter++ + ": " + sys.toString());
+        }
+    }
 }
