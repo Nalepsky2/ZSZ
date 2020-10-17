@@ -1,4 +1,4 @@
-package com.zsz.raiting;
+package com.zsz.raiting.all;
 
 public enum BusinessSize {
     SMALL,
